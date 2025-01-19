@@ -11,7 +11,7 @@ const Login = ({ setIsAuthenticated }) => {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('https://calorie-tracker-system.onrender.com/api/auth/login', { email, password });
+      const response = await axios.post('https://calorie-tracker-2.onrender.com/api/auth/login', { email, password });
       console.log(response);
       if (response.data.token) {
         localStorage.setItem('calorie', response.data.token);

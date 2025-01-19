@@ -24,7 +24,7 @@ const Dashboard = ({ setIsAuthenticated }) => {
 
     setLoading(true);
     try {
-      const response = await axios.get(`https://calorie-tracker-system.onrender.com/api/logs/${date}`, {
+      const response = await axios.get(`https://calorie-tracker-2.onrender.com/api/logs/${date}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       setLogs(response.data);
@@ -50,7 +50,7 @@ const Dashboard = ({ setIsAuthenticated }) => {
     }
     try {
       const response = await axios.patch(
-        `https://calorie-tracker-system.onrender.com/api/logs/${logId}/${foodItemId}`,
+        `https://calorie-tracker-2.onrender.com/api/logs/${logId}/${foodItemId}`,
         updatedData,
         { headers: { Authorization: `Bearer ${token}` } }
       );
@@ -79,7 +79,7 @@ const Dashboard = ({ setIsAuthenticated }) => {
     try {
       const { logId, foodItemId } = foodItemToDelete;
       const response = await axios.delete(
-        `https://calorie-tracker-system.onrender.com/api/logs/${logId}/${foodItemId}`,
+        `https://calorie-tracker-2.onrender.com/api/logs/${logId}/${foodItemId}`,
         { headers: { Authorization: `Bearer ${token}` } }
       );
       fetchLogs();

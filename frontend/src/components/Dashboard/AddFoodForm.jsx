@@ -13,7 +13,7 @@ const AddFoodForm = ({ date, onLogAdded }) => {
     try {
       const foodItem = { name, calories: Number(calories), quantity: Number(quantity) };
       await axios.post(
-        'https://calorie-tracker-system.onrender.com/api/logs',
+        'https://calorie-tracker-2.onrender.com/api/logs',
         { date, foodItems: [foodItem] },
         { headers: { Authorization: `Bearer ${token}` } }
       );
